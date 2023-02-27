@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.car-wapper {
+    @apply bg-slate-300 w-full flex h-52 justify-center items-center
+}
+
+.car-wapper>div {
+    @apply w-0 h-[0%] relative flex justify-center items-center bg-slate-500 rounded-xl duration-200 opacity-95
+}
+
+.car-wapper img {
+    @apply w-full h-full object-cover;
+}
+
+/* element centrale */
+.car-wapper>div.a-selected+div+div {
+    @apply h-[100%] bg-slate-600 z-50 w-48
+}
+
+/* element mi-central */
+.car-wapper>div.a-selected+div {
+    @apply h-[90%] translate-x-1/2 w-48 z-40
+}
+
+.car-wapper>div.a-selected+div+div+div {
+    @apply h-[90%] -translate-x-1/2 w-48 z-40
+}
+
+/* element finaux */
+.car-wapper>div.a-selected {
+    @apply h-[80%] translate-x-2/3 w-48 z-30
+}
+
+.car-wapper>div.a-selected+div+div+div+div {
+    @apply h-[80%] -translate-x-2/3 w-48 z-30
+}
